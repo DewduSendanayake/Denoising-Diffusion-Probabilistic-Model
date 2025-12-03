@@ -1,12 +1,12 @@
-# 🎨 Denoising Diffusion Probabilistic Models 🎨 
+# Denoising Diffusion Probabilistic Models 🖼️
 
 A PyTorch implementation of **Denoising Diffusion Probabilistic Models (DDPM)** for unconditional image generation. This project demonstrates how diffusion models progressively denoise random noise into coherent images through a learned reverse diffusion process.
 
-## 📋 Overview
+## Overview 📋 
 
 This implementation is based on the DDPM paper and provides a complete training pipeline for generating images using diffusion models. The model learns to reverse a gradual noising process, enabling it to generate high-quality images from pure Gaussian noise.
 
-### ✨ Key Features
+### Key Features ✨ 
 
 - **UNet Architecture** with self-attention mechanisms
 - **Training with checkpointing** - Resume training from saved checkpoints
@@ -15,7 +15,7 @@ This implementation is based on the DDPM paper and provides a complete training 
 - **Image generation** - Sample new images during and after training
 - **Google Colab compatible** - Train on free GPU resources
 
-## 🏗️ Architecture
+## Architecture 🏗️ 
 
 The implementation consists of several key components:
 
@@ -38,7 +38,7 @@ The implementation consists of several key components:
   - `SelfAttention` - Multi-head self-attention mechanism
   - `EMA` - Exponential Moving Average for model weights (optional)
 
-## 🚀 Getting Started
+## Getting Started 🚀
 
 ### Prerequisites
 
@@ -46,7 +46,7 @@ The implementation consists of several key components:
 pip install torch torchvision matplotlib tqdm tensorboard pillow
 ```
 
-### 📂 Dataset Structure
+### Dataset Structure 📂
 
 Organize your images in the following structure:
 ```
@@ -57,7 +57,7 @@ dataset/
     └── ...
 ```
 
-### 🎮 Training
+### Training 🎮 
 
 The notebook `Diffusion_Models_PyTorch_Implementation_YT.ipynb` contains the complete training pipeline.
 
@@ -81,7 +81,7 @@ args.lr = 3e-4                         # Learning rate
 - ✅ **Sample generation** - Images generated after each epoch
 - ✅ **Model saving** - Checkpoints include model, optimizer state, and epoch number
 
-### 🎯 Sampling/Inference
+### Sampling/Inference 🎯
 
 Once trained, the model can generate new images by sampling from random noise:
 
@@ -97,7 +97,7 @@ sampled_images = diffusion.sample(model, n=16)
 plot_images(sampled_images)
 ```
 
-## 📊 Training Process
+## Training Process 📊
 
 1. **Forward Diffusion**: Random noise is gradually added to training images over T timesteps
 2. **Model Training**: UNet learns to predict and remove the noise at each timestep
@@ -109,7 +109,7 @@ The model uses:
 - **Noise Schedule**: Linear schedule from β_start=1e-4 to β_end=0.02
 - **Timesteps**: 1000 diffusion steps
 
-## 📁 Output Structure
+## Output Structure 📁
 
 ```
 models/
@@ -126,7 +126,7 @@ runs/
 └── DDPM_Unconditional/      # TensorBoard logs
 ```
 
-## 🔧 Troubleshooting
+## Troubleshooting 🔧
 
 ### PyTorch 2.6+ Checkpoint Loading
 
@@ -148,24 +148,27 @@ checkpoint = torch.load(model_path, weights_only=False)
 
 Ensure your dataset path is correctly set and the directory structure matches the expected format with subdirectories containing images.
 
-## 📚 References
+## References 📚
 
 - [Denoising Diffusion Probabilistic Models (DDPM) Paper](https://arxiv.org/abs/2006.11239)
 - Original implementation inspired by research in diffusion models
 
-## 📝 License
+## License 📝
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
-
-## ⭐ Acknowledgments
+## Acknowledgments ⭐
 
 - PyTorch team for the deep learning framework
 - Authors of the DDPM paper for the groundbreaking research
 - Google Colab for providing free GPU resources
+
+## Support & Contact 📞
+
+- 🐛 **Issues**: [GitHub Issues](https://github.com/DewduSendanayake/Seasonal_Travel_Recommender/issues)
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/DewduSendanayake/Seasonal_Travel_Recommender/discussions)
+- 👥 **Authors**: [DewduSendanayake](https://github.com/DewduSendanayake), [dulhara79](https://github.com/dulhara79), [UVINDUSEN](https://github.com/UVINDUSEN), [SENUVI20](https://github.com/SENUVI20)
 
 ---
 
