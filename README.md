@@ -8,12 +8,12 @@ This implementation is based on the DDPM paper and provides a complete training 
 
 ### ✨ Key Features
 
-- 🔥 **UNet Architecture** with self-attention mechanisms
-- 📊 **Training with checkpointing** - Resume training from saved checkpoints
-- 🎯 **Configurable diffusion parameters** - Customize noise schedules and timesteps
-- 📈 **TensorBoard logging** - Track training progress in real-time
-- 🖼️ **Image generation** - Sample new images during and after training
-- 💾 **Google Colab compatible** - Train on free GPU resources
+- **UNet Architecture** with self-attention mechanisms
+- **Training with checkpointing** - Resume training from saved checkpoints
+- **Configurable diffusion parameters** - Customize noise schedules and timesteps
+- **TensorBoard logging** - Track training progress in real-time
+- **Image generation** - Sample new images during and after training
+- **Google Colab compatible** - Train on free GPU resources
 
 ## 🏗️ Architecture
 
